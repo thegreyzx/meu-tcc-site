@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - Meus Cursos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+    <h1>Meus Cursos</h1>
+  </header>
+
+  <nav id="sidebar" class="sidebar">
+    <button class="close-btn" onclick="toggleMenu()">✖</button>
+    <ul>
+      <li><a href="dashboard.html">🏠 Dashboard</a></li>
+      <li><a href="curso.html">📚 Cursos</a></li>
+      <li><a href="conta.html">👤 Minha Conta</a></li>
+      <li><a href="index.html">🚪 Sair</a></li>
+    </ul>
+  </nav>
+
+  <main class="dashboard">
+    <section>
+      <h2>Em andamento</h2>
+      <div class="cursos-lista">
+        <div class="curso-card">
+          <h3>Lógica de Programação</h3>
+          <p>Progresso: 70%</p>
+          <button class="btn" onclick="window.location.href='curso.html'">Continuar</button>
+        </div>
+        <div class="curso-card">
+          <h3>HTML e CSS</h3>
+          <p>Progresso: 45%</p>
+          <button class="btn">Continuar</button>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Concluídos</h2>
+      <div class="cursos-lista">
+        <div class="curso-card concluido">
+          <h3>Pacote Office</h3>
+          <p>Concluído ✅</p>
+          <button class="btn" disabled>Finalizado</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+
+/* ====== Global Reset ====== */
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#ffffff;
+  --text:#2f3336;
+  --muted:#6b7280;
+  --primary:#2f3336;
+  --primary-2:#1e2022;
+  --accent:#007bff;
+  --ok:#28a745;
+  --card:#f5f5f5;
+  --radius:12px;
+}
+html,body{height:100%}
+body{font-family:Arial, Helvetica, sans-serif;background:var(--bg);color:var(--text)}
+
+/* ====== Topbar ====== */
+.topbar{background:var(--primary);color:#fff;display:flex;align-items:center;gap:12px;padding:12px 16px;position:sticky;top:0}
+.topbar h1{flex:1;text-align:center;font-size:18px}
+
+/* ====== Buttons & Inputs ====== */
+button{cursor:pointer}
+.btn, .menu-btn{
+  background:var(--primary);color:#fff;border:none;border-radius:20px;padding:10px 16px;transition:.2s;
+}
+.btn:hover, .menu-btn:hover{background:var(--primary-2)}
+.btn-primary{background:var(--accent);}
+.btn-primary:hover{background:#0056b3}
+input, textarea, select{
+  padding:12px;border:1px solid #ddd;border-radius:8px;font-size:15px;color:var(--text);
+}
+label{font-size:14px;color:var(--text)}
+
+/* ====== Login ====== */
+.login-container{width:100%;max-width:380px;margin:0 auto;padding:24px;text-align:center}
+.logo img{max-width:180px;margin:24px auto}
+.login-form{display:flex;flex-direction:column;gap:14px;margin-top:10px}
+.login-form button{border-radius:999px}
+
+/* link extra */
+.extra{margin-top:16px}
+.extra a{text-decoration:none;color:var(--primary)}
+
+/* ====== Dashboard ====== */
+.dashboard{padding:20px}
+.dashboard h2{margin:20px 0 10px;font-size:18px}
+.cursos-lista{display:flex;flex-direction:column;gap:14px}
+.curso-card{background:var(--card);border-radius:var(--radius);padding:16px;box-shadow:0 2px 5px rgba(0,0,0,.08)}
+.curso-card.concluido{background:#d9ffd9;border-left:5px solid var(--ok)}
+.curso-card button{margin-top:8px}
+
+/* ====== Curso (player + aulas) ====== */
+.curso-container{display:grid;grid-template-columns:2fr 1fr;gap:20px;padding:20px}
+.video-aula iframe{border-radius:10px;width:100%;height:400px}
+.progresso{width:100%;background:#e5e7eb;border-radius:8px;margin:10px 0}
+.progresso-barra{height:12px;background:#4caf50;border-radius:8px}
+.nav-aulas{display:flex;justify-content:space-between;margin-top:10px}
+.btn-nav{background:var(--accent);color:#fff;border:none;padding:10px 15px;border-radius:6px}
+.btn-nav:hover{background:#0056b3}
+.lista-aulas{background:#f8f9fa;padding:15px;border-radius:10px}
+.lista-aulas ul{list-style:none}
+.lista-aulas li{padding:8px;margin-bottom:6px;border-radius:6px;cursor:pointer}
+.lista-aulas .concluida{background:#d4edda}
+.lista-aulas .atual{background:#cce5ff}
+.lista-aulas .aula:hover{background:#e2e3e5}
+
+/* ====== Minha Conta ====== */
+.conteudo{padding:20px}
+.perfil{text-align:center;margin-bottom:30px}
+.foto-perfil{border-radius:50%;width:100px;height:100px}
+.btn-editar{background:var(--accent);border:none;color:#fff;padding:10px 15px;margin-top:10px;border-radius:8px}
+.btn-editar:hover{background:#0056b3}
+.atividades{background:#f1f1f1;padding:15px;border-radius:10px}
+.atividades ul{list-style:none}
+.atividades li{background:#fff;margin:8px 0;padding:10px;border-radius:6px}
+
+/* ====== Sidebar (modern drawer) ====== */
+.sidebar{position:fixed;top:0;left:-260px;width:260px;height:100%;background:var(--primary);color:#fff;transition:left .3s ease;padding-top:60px;z-index:1000}
+.sidebar.active{left:0}
+.sidebar .close-btn{position:absolute;top:10px;right:15px;background:none;border:none;color:#fff;font-size:20px;cursor:pointer}
+.sidebar ul{list-style:none;padding:0}
+.sidebar ul li{padding:14px 18px}
+.sidebar ul li a{color:#fff;text-decoration:none;display:block;border-radius:8px}
+.sidebar ul li a:hover{background:#444}
+
+/* ====== Responsivo ====== */
+@media (max-width: 768px){
+  .curso-container{grid-template-columns:1fr}
+}

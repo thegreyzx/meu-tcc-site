@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curso - Lógica de Programação</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+    <h1>Lógica de Programação</h1>
+  </header>
+
+  <nav id="sidebar" class="sidebar">
+    <button class="close-btn" onclick="toggleMenu()">✖</button>
+    <ul>
+      <li><a href="dashboard.html">🏠 Dashboard</a></li>
+      <li><a href="curso.html">📚 Cursos</a></li>
+      <li><a href="conta.html">👤 Minha Conta</a></li>
+      <li><a href="index.html">🚪 Sair</a></li>
+    </ul>
+  </nav>
+
+  <main class="curso-container">
+    <section class="video-aula">
+      <iframe src="https://www.youtube.com/embed/8mei6uVttho" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+      <div class="progresso">
+        <div class="progresso-barra" style="width: 40%;"></div>
+      </div>
+      <p>Progresso: 40%</p>
+      <div class="nav-aulas">
+        <button class="btn-nav">⬅ Aula Anterior</button>
+        <button class="btn-nav">Próxima Aula ➡</button>
+      </div>
+    </section>
+
+    <aside class="lista-aulas">
+      <h3>📖 Aulas</h3>
+      <ul>
+        <li class="aula concluida">✅ Introdução</li>
+        <li class="aula atual">▶ Variáveis e Tipos de Dados</li>
+        <li class="aula">Condicionais (if/else)</li>
+        <li class="aula">Laços de Repetição</li>
+        <li class="aula">Funções</li>
+        <li class="aula">Projeto Final</li>
+      </ul>
+    </aside>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

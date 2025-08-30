@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minha Conta</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+    <h1>Minha Conta</h1>
+  </header>
+
+  <nav id="sidebar" class="sidebar">
+    <button class="close-btn" onclick="toggleMenu()">✖</button>
+    <ul>
+      <li><a href="dashboard.html">🏠 Dashboard</a></li>
+      <li><a href="curso.html">📚 Cursos</a></li>
+      <li><a href="conta.html">👤 Minha Conta</a></li>
+      <li><a href="index.html">🚪 Sair</a></li>
+    </ul>
+  </nav>
+
+  <main class="conteudo">
+    <section class="perfil">
+      <img src="https://via.placeholder.com/100" alt="Foto de perfil" class="foto-perfil">
+      <h2>João Augusto</h2>
+      <p>Email: joao@email.com</p>
+      <button class="btn-editar">Editar Perfil</button>
+    </section>
+
+    <section class="atividades">
+      <h3>📌 Últimas Atividades</h3>
+      <ul>
+        <li>✅ Concluiu a aula "Introdução ao HTML"</li>
+        <li>⏳ Aula em andamento: "CSS Avançado"</li>
+        <li>🏆 Curso "Pacote Office" concluído</li>
+      </ul>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
